@@ -3,12 +3,12 @@ use std::fs;
 fn main() {
   println!("Hello, world!");
 
-  println!("{:#?}", get_max_elf_calories())
+  println!("{:#?}", get_max_elf_calories("assets/part0.txt"))
 }
 
-fn get_max_elf_calories() -> u64 {
-  let contents = fs::read_to_string("assets/part0.txt")
-    .expect("Should have been able to read the file");
+fn get_max_elf_calories(path: &str) -> u64 {
+  let contents =
+    fs::read_to_string(path).expect("Should have been able to read the file");
   let elves = contents.trim().split("\n\n").map(|elf| {
     elf.split("\n").map(|calories| {
       calories
@@ -32,6 +32,11 @@ mod tests {
 
   #[test]
   fn part0() {
-    assert_eq!(get_max_elf_calories(), 24000)
+    assert_eq!(get_max_elf_calories("assets/part0.txt"), 24000)
+  }
+
+  #[test]
+  fn part1() {
+    assert_eq!(get_max_elf_calories("assets/part1.txt"), 75501)
   }
 }
