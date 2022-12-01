@@ -4,6 +4,7 @@ specifiers:
   '@nrwl/cli': 15.2.4
   '@nrwl/nx-cloud': latest
   '@nrwl/workspace': 15.2.4
+  '@nxrs/cargo': ^0.3.3
   nx: 15.2.4
   prettier: ^2.6.2
   typescript: ~4.8.2
@@ -12,6 +13,7 @@ devDependencies:
   '@nrwl/cli': 15.2.4
   '@nrwl/nx-cloud': 15.0.2
   '@nrwl/workspace': 15.2.4_jc3kjthrexpo2i3acrbjrjqijq
+  '@nxrs/cargo': 0.3.3_@nrwl+devkit@15.2.4
   nx: 15.2.4
   prettier: 2.8.0
   typescript: 4.8.4
@@ -748,6 +750,15 @@ packages:
       - supports-color
       - ts-node
       - typescript
+    dev: true
+
+  /@nxrs/cargo/0.3.3_@nrwl+devkit@15.2.4:
+    resolution: {integrity: sha512-Osh6dbWfygkCTLwedIv/+qyFUJ/rvultE4KN8ELimBgaGKbPrCqqlxVqhnzAcfEv2qYs/tLKRKvPCJqCBCH1Ig==}
+    peerDependencies:
+      '@nrwl/devkit': '>= 12.7.0'
+    dependencies:
+      '@nrwl/devkit': 15.2.4_nx@15.2.4+typescript@4.8.4
+      chalk: 4.1.2
     dev: true
 
   /@parcel/watcher/2.0.4:
