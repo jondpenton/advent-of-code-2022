@@ -23,7 +23,7 @@ fn get_max_elf_calories(path: &str) -> u64 {
     }
   });
 
-  return max_elf_calories;
+  max_elf_calories
 }
 
 #[cfg(test)]
